@@ -1,0 +1,22 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "Juego de memoria para r/argentina-programa",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rolomza/memotest.git"
+  },
+  "author": "Rolomza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rolomza/memotest/issues"
+  },
+  "homepage": "https://github.com/Rolomza/memotest#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
