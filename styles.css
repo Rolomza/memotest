@@ -1,0 +1,52 @@
+body,
+html {
+  height: 100%;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.cuadro {
+  opacity: 0;
+  transition: opacity ease 0.2s;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.fila-juego {
+  border: 1px solid black;
+}
+
+.col {
+  border: 1px solid black;
+}
+
+#fin-juego {
+  display: none;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.verde {
+  background-color: green;
+}
+
+.amarillo {
+  background-color: yellow;
+}
+
+.negro {
+  background-color: black;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.blanco {
+  background-color: white;
+}
