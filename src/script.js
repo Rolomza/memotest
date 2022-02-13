@@ -78,4 +78,12 @@ function eliminarCuadro($cuadro) {
   }, 500);
 }
 
+function evaluarFinDeJuego() {
+  if (document.querySelectorAll('.cuadro').length === 0) {
+    $tablero.style.display = 'none';
+    $mensajeFinJuego.querySelector('strong').textContent = turnos.toString();
+    $mensajeFinJuego.style.display = 'block';
+  }
+}
+
 configurarJuego();
