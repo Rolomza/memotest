@@ -15,6 +15,9 @@ function manejarEventos($tablero) {
   $tablero.onclick = function (e) {
     debugger;
     const $elemento = e.target;
+    if ($elemento.classList.contains('cuadro')) {
+      manejarClickCuadro($elemento);
+    }
   };
 }
 
@@ -28,6 +31,29 @@ function configurarCuadros($cuadros, colores) {
   coloresRandom.forEach(function (color, i) {
     $cuadros[i].classList.add(color);
   });
+}
+
+function manejarClickCuadro($cuadroActual) {
+  mostrarCuadro($cuadroActual);
+
+  if ($primerCuadro === null) {
+    $primerCuadro = $cuadroActual;
+  } else {
+    if ($primerCuadro === $cuadroActual) {
+      return;
+    }
+
+    turnos++;
+
+    if (cuadrosSonIguales($primerCuadro, $cuadroActual)) {
+      eliminarCuadro($primerCuadro);
+      eliminarCuadro($cuadroActual);
+    } else {
+      ocultarCuadro($primerCuadro);
+      ocultarCuadro($cuadroActual);
+    }
+    $primerCuadro = null;
+  }
 }
 
 configurarJuego();
