@@ -8,6 +8,10 @@ html {
   padding-left: 0;
 }
 
+.completo {
+  background: darkgray;
+}
+
 .cuadro {
   opacity: 0;
   transition: opacity ease 0.2s;

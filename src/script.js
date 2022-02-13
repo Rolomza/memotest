@@ -56,4 +56,26 @@ function manejarClickCuadro($cuadroActual) {
   }
 }
 
+function cuadrosSonIguales($cuadro1, $cuadro2) {
+  return $cuadro1.className === $cuadro2.className;
+}
+
+function mostrarCuadro($cuadro) {
+  $cuadro.style.opacity = '1';
+}
+
+function ocultarCuadro($cuadro) {
+  setTimeout(function () {
+    $cuadro.style.opacity = '0';
+  }, 500);
+}
+
+function eliminarCuadro($cuadro) {
+  setTimeout(function () {
+    $cuadro.parentElement.classList.add('completo');
+    $cuadro.remove();
+    evaluarFinDeJuego();
+  }, 500);
+}
+
 configurarJuego();
